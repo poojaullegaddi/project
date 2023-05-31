@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes ML model</title>
+</head>
+<style>
+    label,legend{
+        font-family: 'Rubik', sans-serif;
+    }
+    input[type="text"]{
+        padding: 4px;
+        width: 200px;
+    }
+    input[type="submit"]{
+        background-color: rgb(119, 240, 119);
+        color:rgb(14, 1, 1);
+         padding: 5px; 
+         height:35px; 
+         width: 80px;
+         border-radius: 7px;
+    }
+    input[type="submit"]:hover{
+        background-color:green;
+        color: white;
+    }
+</style>
+<body>
+    <form action="/predict" method="post">
+        <fieldset>
+            <legend>Know your chances of having Diabetes!</legend>
+            <br>
+        <label for="">Pregnancies</label>
+        <input type="text" name="Pregnancies" id="Pregnancies" placeholder="Enter the no. of pregnancies" required>
+        <br><br>
+        <label for="">Glucose</label>
+        <input type="text" name="Glucose" id="Glucose" placeholder="Enter glucose level" required>
+        <br><br>
+        <label for="">Blood Pressure</label>
+        <input type="text" name="BloodPressure" id="BloodPressure" placeholder="Enter blood pressure level" required>
+        <br><br>
+        <label for="">Skin Thickness</label>
+        <input type="text" name="SkinThickness" id="SkinThickness" placeholder="Enter skin thickness" required>
+        <br><br>
+        <label for="">Insulin</label>
+        <input type="text" name="Insulin" id="Insulin" placeholder="Enter insulin level" required>
+        <br><br>
+        <label for="">BMI</label>
+        <input type="text" name="BMI" id="BMI" placeholder="Enter body mass index" required>
+        <br><br>
+        <label for="">Diabetes Pedigree Function</label>
+        <input type="text" name="DiabetesPedigreeFunction" id="DiabetesPedigreeFunction" placeholder="Enter suitable value" required>
+        <br><br>
+         <label for="">Age</label>
+        <input type="text" name="Age" id="Age" placeholder="Enter your age" required>
+        <br><br>
+        <input type="submit" value="PREDICT">
+
+    </fieldset>
+    </form>
+    {{text_prediction}}
+</body>
+</html>
